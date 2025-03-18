@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+:root{
+
+    --ff: "Outfit", sans serif;
+
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 500;
+    --fs-p: 18px;
+
+    --clr-sft-blue: hsl(215, 51%, 70%);
+    --clr-cyan: hsl(178, 100%, 50%);
+
+    --clr-db-body: hsl(217, 54%, 11%);
+    --clr-db-card: hsl(216, 50%, 16%);
+    --clr-db-line: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:var(--ff) ;
+    background-color: var(--clr-db-body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main{
+    background-color: var(--clr-db-card);
+    width: min(90%, 400px);
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+}
+
+main .coin{
+    width: 100%;
+    border-radius: 12px;
+    grid-column: span 2;
+}
+
+main h1{
+    margin: 20px 0px;
+    color: var(--clr-white);
+    font-size: 1.6em;
+    font-weight: var(--fw-bold);
+    grid-column: 1 / span 2;
+}
+
+main p{
+    color: var(--clr-sft-blue);
+    opacity: 60%;
+    font-size: var(--fs-p);
+    margin-right: 60px;
+    line-height: 1.6em;
+    margin-bottom: 15px;
+    grid-column: 1 / span 2;
+}
+
+main div{
+    display: flex;
+    gap: 8px;
+    grid-column: span 1;
+    position: relative;
+}
+main div p{
+    font-size: 16px;
+}
+
+main div.stats p{
+    color: var(--clr-cyan);
+    opacity: 100%;
+    font-weight: var(--fw-normal);
+
+}
+
+main div.stats img{
+    width: 11px;
+}
+
+main div.duration{
+    grid-column: 2/ span 1;
+    justify-self: end;
+    align-self: end;
+    margin-right: -60px;
+}
+
+
+
+
+main div img{
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+main div.profile{
+    border-top: 1px solid var(--clr-db-line);
+    grid-column: span 2;
+    padding-top: 15px;
+    gap: 15px;
+    align-items: center;
+
+}
+
+main div.profile p{
+    font-size: 16px;
+    opacity: 80%;
+    margin-bottom: 0;
+}
+
+main div.profile strong{
+    color: var(--clr-white);
+    font-weight: normal;
+}
+
+main div.profile img{
+    object-fit: contain;
+    margin-bottom: 0;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--clr-white);
+    border-radius: 50%
+}
